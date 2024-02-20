@@ -1,4 +1,6 @@
 "use strict";
+require('dotenv').config()
+
 Object.defineProperty(exports, "__esModule", { value: true });
 const backpack_client_1 = require("./backpack_client");
 
@@ -144,8 +146,8 @@ const buyfun = async (client) => {
 }
 
 (async () => {
-    const apisecret = "";
-    const apikey = "";
+    const apisecret = process.env.Key
+    const apikey = process.env.Secret
     const client = new backpack_client_1.BackpackClient(apisecret, apikey);
     init(client);
 })()
