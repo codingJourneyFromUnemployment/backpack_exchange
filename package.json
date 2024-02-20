@@ -16,6 +16,7 @@
     "clean": "rimraf lib"
   },
   "dependencies": {
+    "colors": "^1.4.0",
     "dotenv": "^16.4.5",
     "got": "^11.8.2",
     "qs": "^6.11.2",

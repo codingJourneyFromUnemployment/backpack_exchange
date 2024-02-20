@@ -1,5 +1,6 @@
 "use strict";
 require('dotenv').config()
+const colors = require('colors');
 
 Object.defineProperty(exports, "__esModule", { value: true });
 const backpack_client_1 = require("./backpack_client");
@@ -46,7 +47,7 @@ let sellbuy = 0;
 
 const init = async (client) => {
     try {
-        console.log(`成功买入次数:${successbuy},成功卖出次数:${sellbuy}`);
+        console.log(`成功买入次数:${successbuy},成功卖出次数:${sellbuy}`.green);
         console.log(getNowFormatDate(), "等待3秒...");
         await delay(3000);
         console.log(getNowFormatDate(), "正在获取账户信息中...");
@@ -60,7 +61,7 @@ const init = async (client) => {
         }
     } catch (e) {
         init(client);
-        console.log(getNowFormatDate(), "挂单失败，重新挂单中...");
+        console.log(getNowFormatDate(), "挂单失败，重新挂单中...".red);
         await delay(1000);
     }
 }
