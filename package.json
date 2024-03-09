@@ -11,6 +11,7 @@
     "url": "https://github.com/CKS-Systems/backpack-client"
   },
   "scripts": {
+    "start":"ts-node index.ts",
     "build": "tsc",
     "prebuild": "yarn clean",
     "clean": "rimraf lib"
